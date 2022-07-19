@@ -1,8 +1,12 @@
+window.addEventListener("load", function () {
+  $("#preloader").css("display", "none");
+  $("nav").removeClass("scrolled");
+});
+
 // --- Animate On Scroll ---
 AOS.init({
   duration: 700,
   once: true,
-  disable: "mobile",
 });
 
 // --- Dark Mode ---
@@ -49,21 +53,23 @@ $(window).scroll(function (event) {
   currentY = $(this).scrollTop();
   if (currentY > lastY) {
     $("nav").addClass("scrolled");
-    $(".daftar-isi").removeClass("scrolled");
-    $(".info-lainnya").removeClass("scrolled");
   } else {
     $("nav").removeClass("scrolled");
-    $(".daftar-isi").addClass("scrolled");
-    $(".info-lainnya").addClass("scrolled");
   }
   lastY = currentY;
   if (currentY > 100) {
+    $("nav").addClass("scrolled-bg shadow");
+    $(".navbar-brand").addClass("scrolled");
+    $(".fa-bars").addClass("scrolled");
     $(".dark-mode-container").addClass("scrolled");
     $(".nav-link-wrapper").addClass("scrolled");
     $(".ball").removeClass("bg-light");
     $(".ball").addClass("bg-secondary");
   } else {
+    $(".fa-bars").removeClass("scrolled");
     $(".dark-mode-container").removeClass("scrolled");
+    $("nav").removeClass("scrolled-bg shadow");
+    $(".navbar-brand").removeClass("scrolled");
     $(".nav-link-wrapper").removeClass("scrolled");
     $(".ball").removeClass("bg-secondary");
     $(".ball").addClass("bg-light");
