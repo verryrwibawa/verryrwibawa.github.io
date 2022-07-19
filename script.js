@@ -1,3 +1,9 @@
+document.querySelector("body").addEventListener("load", function () {
+  $("#preloader").css("display", "block");
+});
+
+$("nav").addClass("fixed-top");
+
 // --- Animate On Scroll ---
 AOS.init({
   duration: 700,

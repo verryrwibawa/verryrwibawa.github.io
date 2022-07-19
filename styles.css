@@ -53,6 +53,15 @@ p {
   margin-bottom: 1rem;
 }
 
+#preloader {
+  height: 100vh;
+  width: 100%;
+  z-index: 42;
+  background: #fff url(img/Loader.gif) no-repeat center center;
+  background-size: 30%;
+  display: none;
+}
+
 section {
   padding: 10rem 0;
 }
@@ -68,7 +77,7 @@ footer {
 /* navbar */
 nav {
   transition: all 0.5s;
-  z-index: 2;
+  /* z-index: 2; */
   color: white;
   height: 80px;
 }
@@ -233,7 +242,7 @@ nav.scrolled-bg {
 
 .checkbox {
   position: absolute;
-  z-index: 2;
+  /* z-index: 2; */
   top: 0;
   left: 0;
   right: 0;
