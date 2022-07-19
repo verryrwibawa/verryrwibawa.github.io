@@ -1,10 +1,7 @@
 window.addEventListener("load", function () {
   $("#preloader").css("display", "none");
-});
-
-setTimeout(function () {
   $("nav").removeClass("scrolled");
-}, 400);
+});
 
 // --- Animate On Scroll ---
 AOS.init({
