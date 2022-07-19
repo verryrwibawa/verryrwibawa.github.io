@@ -47,6 +47,12 @@ html::-webkit-scrollbar-track {
   background-color: #000;
 }
 
+h1,
+h2,
+p {
+  margin-bottom: 2rem;
+}
+
 section,
 footer,
 body {
@@ -54,10 +60,12 @@ body {
   overflow-x: hidden;
 }
 
-h1,
-h2,
-p {
-  margin-bottom: 2rem;
+#preloader {
+  height: 100vh;
+  z-index: 42;
+  background: #1f1f1f url(/img/Loader.gif) no-repeat center center;
+  background-size: 30%;
+  display: block;
 }
 
 /* navbar */

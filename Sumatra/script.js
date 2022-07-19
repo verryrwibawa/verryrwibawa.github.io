@@ -1,8 +1,15 @@
+window.addEventListener("load", function () {
+  $("#preloader").css("display", "none");
+});
+
+setTimeout(function () {
+  $("nav").removeClass("scrolled");
+}, 400);
+
 // --- Animate On Scroll ---
 AOS.init({
   duration: 700,
   once: true,
-  disable: "mobile",
 });
 
 // --- Dark Mode ---
@@ -55,8 +62,8 @@ $(window).scroll(function (event) {
   lastY = currentY;
   if (currentY > 100) {
     $("nav").addClass("scrolled-bg shadow");
-    $(".fa-bars").addClass("scrolled");
     $(".navbar-brand").addClass("scrolled");
+    $(".fa-bars").addClass("scrolled");
     $(".dark-mode-container").addClass("scrolled");
     $(".nav-link-wrapper").addClass("scrolled");
     $(".ball").removeClass("bg-light");

@@ -1,8 +1,10 @@
-document.querySelector("body").addEventListener("load", function () {
-  $("#preloader").css("display", "block");
+window.addEventListener("load", function () {
+  $("#preloader").css("display", "none");
 });
 
-$("nav").addClass("fixed-top");
+setTimeout(function () {
+  $("nav").removeClass("scrolled");
+}, 400);
 
 // --- Animate On Scroll ---
 AOS.init({

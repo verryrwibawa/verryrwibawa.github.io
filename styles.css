@@ -55,11 +55,10 @@ p {
 
 #preloader {
   height: 100vh;
-  width: 100%;
   z-index: 42;
-  background: #fff url(img/Loader.gif) no-repeat center center;
+  background: #1f1f1f url(img/Loader.gif) no-repeat center center;
   background-size: 30%;
-  display: none;
+  display: block;
 }
 
 section {
