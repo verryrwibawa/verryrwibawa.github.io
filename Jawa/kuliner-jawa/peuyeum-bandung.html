@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peuyeum Bandung</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Stylesheet -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+
+    <header>
+      <!-- navbar -->
+      <nav class="navbar fixed-top">
+        <div class="container w-75">
+          <button
+            class="btn-hamburger bg-transparent border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions"
+            aria-controls="offcanvasWithBothOptions"
+          >
+            <i class="fa-solid fa-lg fa-bars"></i>
+          </button>
+          <a class="navbar-brand me-auto" href="/index.html"
+            >Kuliner.<span class="text-green">id</span></a
+          >
+        </div>
+
+        <!-- offcanvas -->
+        <div
+          class="offcanvas offcanvas-start text-black"
+          data-bs-scroll="true"
+          tabindex="-1"
+          id="offcanvasWithBothOptions"
+          aria-labelledby="offcanvasWithBothOptionsLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body p-0">
+            <a class="navbar-brand" href="/index.html"
+              >Kuliner.<span class="text-green">id</span></a
+            >
+
+            <ul class="navbar-nav pt-5">
+              <li class="nav-item">
+                <a class="nav-link active" href="/Sumatra/index.html"
+                  >Kuliner Sumatra</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Jawa/index.html">Kuliner Jawa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Kalimantan/">Kuliner Kalimantan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Sulawesi/index.html"
+                  >Kuliner Sulawesi</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Papua/index.html">Kuliner Papua</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main -->
+
+    <main>
+      <!-- Section Hero -->
+      <section id="hero">
+        <h1 class="text-center text-capitalize">Peuyeum bandung</h1>
+
+        <!-- Carousel -->
+        <div class="container w-75">
+          <div
+            id="carouselExampleFade"
+            class="carousel slide carousel-dark carousel-fade mx-auto"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="/Jawa/kuliner-jawa/img/gambar28.png"
+                  class="d-block w-100"
+                  alt="img-soto-lamongan"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="/Jawa/kuliner-jawa/img/gambar29.jpg"
+                  class="d-block w-100"
+                  alt="img-soto-lamongan"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="/Jawa/kuliner-jawa/img/gambar30.jpg"
+                  class="d-block w-100"
+                  alt="img-soto-lamongan"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleFade"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleFade"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <!-- Button scroll to top -->
+        <div class="backToTop bg-danger text-white">
+          <i class="fa-solid fa-lg fa-arrow-up"></i>
+        </div>
+      </section>
+
+      <!-- Section Content -->
+
+      <section id="content">
+        <div class="container-fluid">
+          <div class="row d-flex justify-content-center">
+            <!-- Daftar Isi -->
+            <div class="col-lg-3 content">
+              <div class="daftar-isi">
+                <h5>Daftar Isi</h5>
+                <ul class="navbar-nav">
+                  <li>
+                    <a class="daftar-isi-link" href="#peueyeum-bandung"
+                      >Peueyeum Bandung</a
+                    >
+                  </li>
+                  <li>
+                    <a class="daftar-isi-link" href="#sejarah">Sejarah</a>
+                  </li>
+                  <li>
+                    <a class="daftar-isi-link" href="#cara-membuat"
+                      >Cara Membuat</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Konten Utama -->
+            <div class="col-lg-6 content">
+              <div class="main-content">
+                <!-- Deskripsi -->
+                <div id="peueyeum-bandung" class="rendang">
+                  <h1>Peueyeum Bandung</h1>
+                  <p>
+                    Siapa yang tak mengenal peyeum, kudapan tradisional khas
+                    Bandung, Jawa Barat. Makanan berbahan dasar ketela atau umbi
+                    singkong ini dibuat melalui proses peragian sehingga
+                    menghasilkan rasa dan aroma yang unik dan khas. Namun,
+                    tahukah Anda bagaimana awal mula singkong sebagai panganan
+                    pokok pada saat itu yang diubah menjadi peyeum atau tape
+                    singkong? Rupanya, hal tersebut bermula saat krisis pangan
+                    di masa penjajahan Belanda sekitar tahun 1.800-an silam.
+                    <br />
+                    <b>Bermula Saat Krisis Pangan Era Perang</b> <br />
+                    Di masa lalu ketika terjadi perang oleh tentara Belanda,
+                    masyarakat Jawa Barat tidak bisa makan termasuk mendapatkan
+                    beras karena para penjajah menyita seluruh padi yang
+                    dimiliki oleh masyarakat. Sehingga masyarakat hanya
+                    mengandalkan tumbuhan umbi-umbian termasuk singkong sebagai
+                    bahan konsumsi utama pengganti nasi. <br />
+                    <b>Dijadikan Buah Tangan Khas</b> <br />
+                    Dilansir dari Ayobandung, biasanya masyarakat banyak mencari
+                    peyeum khas Bandung tersebut sebagai oleh-oleh saat masa
+                    libur panjang khususnya Lebaran dan Tahun Baru. Rata-rata
+                    menyukai rasanya karena menimbulkan efek hangat saat
+                    memakannya akibat dari proses fermentasi serta rasanya yang
+                    legit dan manis. Menurut pedagang asli Desa Cimenyan yang
+                    enggan disebutkan namanya itu, jenis singkong yang cocok
+                    dijadikan peyeum adalah singkong mentega. Hal ini
+                    dikarenakan teksturnya yang lembut dan legit dan berwarna
+                    kuning saat sudah menjadi peyeum. Rata rata harga jual
+                    perkilonya berkisar mulai Rp 10.000 sampai Rp 20.000
+                    tergantung tingkat kematangan dan bobotnya.
+                  </p>
+                </div>
+                <!-- Sejarah -->
+                <div id="sejarah" class="sejarah">
+                  <h1>Sejarah</h1>
+                  <p>
+                    <b>Mencoba Mengawetkan Singkong</b> <br />
+                    Dikutip dari kebudayan.kemdikbud.go.id, awal mula proses
+                    pengawetan singkong berasal dari inisiatif masyarakat di
+                    Kecamatan Cimenyan, Kabupaten Bandung. Di masa penjajahan
+                    saat itu masyarakat Cimenyan mulai memperhatikan ketahanan
+                    pangan di masa perang dengan memanfaatkan komoditas singkong
+                    di wilayahnya dengan cara mengawetkannya melalui proses
+                    peragian agar tidak busuk. Cara membuatnya pun terbilang
+                    mudah, awal mula singkong utuh dikupas kulitnya lalu
+                    dipotong kedua ujungnya. Setelah itu, dicuci dan direbus dua
+                    kali dengan masing masing durasi 1,5 jam dan 1 jam setelah
+                    itu ditiriskan dan diberi ragi secukupnya dan kembali
+                    didiamkan selama 2 sampai 3 hari, semakin banyak ragi
+                    semakin menimbulkan rasa yang masam. <br />
+                    <b>Bermula Saat Krisis Pangan Era Perang</b> <br />
+                    Pada masa lalu ketika terjadi perang oleh tentara Belanda,
+                    masyarakat Jawa Barat tidak bisa makan, termasuk mendapatkan
+                    beras karena para penjajah menyita seluruh padi yang
+                    dimiliki oleh masyarakat. Masyarakat hanya mengandalkan
+                    tumbuhan umbi-umbian termasuk singkong sebagai bahan
+                    konsumsi utama pengganti nasi. Pada 1950-an, Desa Cimenyan
+                    mulai berbenah diri dengan mengandalkan penjualan dari
+                    camilan yang diawetkan tersebut. Biasanya peyeum mulai
+                    banyak dijumpai ketika memasuki wilayah Sumedang sebelum
+                    memasuki kawasan Kota Bandung dengan para pembuat yang
+                    mencapai 200-an orang pada saat itu. Semenjak kejadian
+                    tersebut, banyak masyarakat di Kabupaten dan Kota Bandung
+                    serta wilayah Jawa Barat lain yang menyukai cita rasa manis
+                    dan sedikit masam dari camilan yang biasa dijual dengan cara
+                    di gantung tersebut. <br />
+                    Peuyeum Bandung ada diturunkan secara turun temurun dari
+                    nenek moyangnya. Resepnya dan tata cara pembuatanya juga
+                    diberikan secara kekeluargaan. Awalnya peuyeum dimulai dari
+                    daerah bandung, lama kelamaan sudah tersebar di daerah jawa
+                    barat dan sampai kini menjadi icon makanan khas jawa barat
+                    tepatnya kota kembang Bandung. Jadi tidak ada yang tahu tuh
+                    sejak kapan peuyeum diciptakan.
+                  </p>
+                </div>
+                <!-- Cara Membuat -->
+                <div id="cara-membuat" class="cara-membuat">
+                  <h1>Cara Membuat</h1>
+                  <iframe
+                    width="100%"
+                    height="400"
+                    src="https://www.youtube.com/embed/azLWI8k66DY"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                  <h5 class="fw-bold">Bahan bahan</h5>
+                  <ul>
+                    <li>Air secukupnya</li>
+                    <li>Daun pisang</li>
+                    <li>Ragi yang telah dihaluskan</li>
+                    <li>Singkong 2 kg</li>
+                  </ul>
+
+                  <h5 class="fw-bold">Alat :</h5>
+                  <ul>
+                    <li>Baskom</li>
+                    <li>Kain Lap</li>
+                    <li>Kompor</li>
+                    <li>Panci Kukus</li>
+                    <li>Penyaring</li>
+                    <li>Piring</li>
+                    <li>Pisau</li>
+                    <li>Sendok & Garpu</li>
+                  </ul>
+
+                  <h5 class="fw-bold">Cara Membuat :</h5>
+                  <ol>
+                    <li>Siapkan semua bahan.</li>
+                    <li>
+                      Kupas singkong dan kikis bagian kulit arinya hingga kesat.
+                    </li>
+                    <li>
+                      Potong singkong yang telah dikupas sesuai keinginan.
+                    </li>
+                    <li>Cuci hingga bersih singkong yang telah dipotong.</li>
+                    <li>
+                      Sementara menunggu singkong kering, masukkan air ke dalam
+                      panci samapai kira – kira terisi seperempat lalu panaskan
+                      hingga mendidih.
+                    </li>
+                    <li>
+                      Setelah air mendidih masukkan singkong ke dalam panci
+                      kukus, lalu kukus hingga singkong ¾ matang, kira – kira
+                      ketika ‘daging’ singkong sudah bisa ditusuk dengan garpu.
+                    </li>
+                    <li>
+                      Setelah matang, angkat singkong yang telah ¾ masak lalu
+                      taruh di suatu wadah, kemudian didinginkan
+                    </li>
+                    <li>
+                      Sambil mengipas – ngipas, bisa disiapkan wadah sebagai
+                      tempat untuk mengubah singkong menjadi tape. Wadah itu
+                      terdiri dari baskom yang bawahnya dilapisi dengan daun
+                      pisang.
+                    </li>
+                    <li>
+                      Setelah singkong benar – benar dingin, masukkan singkong
+                      ke dalam wadah lalu taburi dengan ragi yang telah
+                      dihaluskan dengan menggunakan saringan
+                    </li>
+                    <li>
+                      Singkong yang telah diberi ragi ini kemudian ditutup
+                      kembali dengan daun pisang. Singkong ini harus benar –
+                      benar tertutup agar mendapatkan hasil yang maksimal.
+                    </li>
+                    <li>
+                      Setelah singkong ditutupi dengan daun pisang, diamkan
+                      selama 1-2 hari hingga sudah terasa lunak dan manis. Saat
+                      itulah singkong telah menjadi tape.
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+
+            <!-- Info lainnya -->
+            <div class="col-lg-3 content">
+              <div class="info-lainnya">
+                <div class="img-container">
+                  <img
+                    src="/Jawa/kuliner-jawa/img/gambar31.png"
+                    alt="img-peuyeum-bandung"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col">Nama lain</div>
+                    <div class="col text-capitalize">Peuyeum bandung</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">Tempat Asal</div>
+                    <div class="col">Indonesia</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">Daerah</div>
+                    <div class="col">Kota Bandung, Jawa Barat</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">Bahan Utama</div>
+                    <div class="col">Singkong</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">Informasi lain</div>
+                    <div class="col">
+                      Memiliki cara penjualan yang unik yaitu dengan cara
+                      digantung
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="bg-black text-white text-center bg-black p-4">
+      &copy; 2022 Kelompok 02. All Rights Reserved
+    </footer>
+
+    <!-- Javascript -->
+    <script
+      src="https://kit.fontawesome.com/702dc10f84.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

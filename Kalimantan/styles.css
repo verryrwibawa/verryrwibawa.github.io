@@ -1,0 +1,246 @@
+/* global styling */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #000;
+}
+
+h1,
+h2,
+p {
+  margin-bottom: 2rem;
+}
+
+/* navbar */
+
+nav {
+  font-size: 1.75rem;
+  padding: 2rem 0 !important;
+  transition: .2s;
+}
+
+nav.scrolled {
+  background-color: #000;
+}
+
+nav .btn-hamburger {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+nav .navbar-brand {
+  margin-left: 5rem;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+nav span {
+  font-size: 1.75rem;
+}
+
+.text-green {
+  color: #37b00c;
+}
+
+/* offcanvas */
+
+nav .offcanvas ul li a {
+  font-size: 1rem;
+  font-weight: 600;
+  display: block;
+  padding: 1rem 5rem;
+  width: 100%;
+}
+
+nav .offcanvas ul li a:hover {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+nav .offcanvas ul li a.active {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+/* Section Hero */
+
+#hero {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, .64), rgba(0, 0, 0, .64)), url("/img/kalimantan.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 15rem 0 22rem 0;
+}
+
+#hero .text-box {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#hero .text-box h1 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+#hero .text-box h1::after {
+  content: '';
+  display: block;
+  width: 30%;
+  height: 0.6rem;
+  background-color: #37b00c;
+  border-radius: 2rem;
+  margin: 2rem auto 4rem;
+}
+
+#hero .text-box h3 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+#hero .backToTop {
+  height: 4rem;
+  width: 4rem;
+  position: fixed;
+  bottom: -6rem;
+  right: 2rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  border-radius: 20%;
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, .8);
+  transition: .3s ease;
+  opacity: 0;
+}
+
+#hero .backToTop:hover {
+  cursor: pointer;
+  padding-top: 1.5rem;
+}
+
+#hero .backToTop.show {
+  bottom: 2rem;
+  opacity: 1;
+}
+
+/* Section Kuliner */
+
+#kuliner div.kuliner-box {
+  padding: 7rem 0;
+}
+
+#kuliner div.kuliner-box h1.kuliner-title {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+
+#kuliner div.kuliner-box div.kuliner-desc {
+  margin-left: 2rem;
+}
+
+#kuliner div.kuliner-desc p {
+  font-size: 1.25rem;
+  line-height: 2;
+}
+
+#kuliner div.kuliner-desc a.btn-selengkapnya {
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  border: 2px solid #000;
+}
+
+#kuliner div.kuliner-box img.img-kuliner {
+  object-fit: cover;
+  width: 80%;
+  border-radius: 4px;
+}
+
+#kuliner .kuliner-box-dark {
+  background-color: #ededed;
+}
+
+/* Footer */
+
+#footer {
+  font-size: 1.25rem;
+}
+
+
+@media (max-width: 1200px) {
+  * {
+    font-size: 12px;
+  }
+
+  nav .container {
+    width: 90% !important;
+  }
+
+  #hero .text-box {
+    width: 70%;
+  }
+
+  #kuliner .kuliner-box {
+    padding: 40px 0px 100px;
+  }
+
+  #hero .text-box {
+    width: 90%;
+  }
+
+  #kuliner {
+    text-align: center;
+  }
+
+  #kuliner div.kuliner-box {
+    padding: 80px 0;
+  }
+
+  #kuliner .kuliner-box .container {
+    width: 90% !important;
+  }
+
+  #kuliner .kuliner-desc {
+    margin-left: 0 !important;
+  }
+
+  #kuliner .kuliner-desc p {
+    text-align: justify;
+  }
+
+  #kuliner .img-kuliner {
+    width: 100% !important;
+    margin: 2rem 0 4rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  #kuliner .kuliner-desc p {
+    font-size: 1rem !important;
+  }
+
+  #kuliner .kuliner-desc .btn-selengkapnya {
+    font-size: .8rem !important;
+  }
+}

@@ -1,0 +1,394 @@
+/* global styling */
+
+:root {
+  --clr-light: #fff;
+  --clr-secondary: #f8f9fa;
+  --clr-dark: #212529;
+  --clr-gray: #ccc;
+  --clr-accent: #37b00c;
+  --clr-op: #fff;
+
+  --foreground: var(--clr-dark);
+  --background: var(--clr-light);
+}
+
+.dark-mode {
+  --clr-light: rgba(255, 255, 255, 0.8);
+  --clr-secondary: #212529;
+  --clr-dark: #121212;
+  --clr-gray: #333;
+  --clr-accent: #37b00c;
+  --clr-op: rgba(0, 0, 0, 0.8);
+
+  --foreground: var(--clr-light);
+  --background: var(--clr-dark);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #000;
+}
+
+section,
+footer,
+body {
+  transition: 0.5s;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+p {
+  margin-bottom: 2rem;
+}
+
+/* navbar */
+nav {
+  transition: all 0.5s;
+  z-index: 2;
+  color: white;
+  height: 80px;
+}
+
+.fa-bars {
+  color: white;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-brand.scrolled,
+.fa-bars.scrolled {
+  color: var(--foreground);
+}
+
+.text-green {
+  color: var(--clr-accent);
+}
+
+.nav-link-wrapper {
+  margin-left: 3rem;
+  height: 100%;
+  gap: 2rem;
+}
+
+.nav-link-wrapper .nav-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.nav-item:before {
+  content: "";
+  height: 5px;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: -15%;
+  background-color: var(--clr-accent);
+  transition: 0.2s;
+}
+
+.nav-item:hover:before,
+.nav-item.active:before {
+  height: 5px;
+  width: 120%;
+}
+
+.nav-link-wrapper li a {
+  font-weight: 300;
+  transition: 0s;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.nav-link-wrapper.scrolled li a {
+  color: var(--foreground);
+}
+
+/* dropdown menu */
+
+.nav-link-wrapper > li > ul.dropdown-menu {
+  transform: translate3d(0, 0, 0) !important;
+  position: absolute;
+  top: 120% !important;
+  border: none;
+  padding: 15px;
+  background-color: var(--background);
+  border-radius: 10px;
+}
+
+.dropdown-item {
+  padding: 1.25rem !important;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.dropdown-item h5,
+.dropdown-item p {
+  color: var(--foreground);
+}
+
+.dropdown-item .img-dropdown {
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+body.dark-mode .dropdown-item:hover {
+  background-color: var(--clr-secondary);
+}
+
+body.dark-mode .dropdown-item:hover p {
+  color: white;
+}
+
+.dropdown-item:hover h5 {
+  color: var(--clr-accent);
+}
+
+.dropdown-item:hover p {
+  color: black;
+}
+
+/* offcanvas */
+.offcanvas {
+  background-color: var(--clr-secondary);
+}
+
+.offcanvas-header {
+  background-color: var(--clr-dark);
+  padding: 2rem 1rem;
+}
+
+.offcanvas ul li a {
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: block;
+  padding: 1.5rem 5rem;
+  width: 100%;
+  color: var(--foreground);
+  border-bottom: 1px solid var(--clr-gray);
+}
+
+.offcanvas ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.offcanvas ul li a.active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.offcanvas .btn-close {
+  color: white !important;
+}
+
+nav.scrolled {
+  top: -7rem;
+}
+
+nav.scrolled-bg {
+  background-color: var(--clr-op);
+  color: var(--foreground);
+}
+
+/* Button dark mode */
+
+.dark-mode-container {
+  width: 38px;
+  height: 24px;
+  border-radius: 2.5rem;
+  padding: 0 4px;
+  box-shadow: inset 0 2px 12px rgba(0, 0, 0, 0.3);
+  background-color: #ffcf0d;
+  transition: 0.5s;
+}
+
+.dark-mode-container.dark {
+  background-color: #444;
+}
+
+.checkbox {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+ion-icon {
+  font-size: 12px;
+}
+
+.ball {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  left: 3.5px;
+  border-radius: 100%;
+  transition: all 0.3s ease-out;
+  background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+}
+
+.checkbox:checked ~ .ball {
+  left: calc(100% - (16px + 3.5px));
+}
+
+/* Section showcase */
+
+#showcase {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url("img/Sumatera.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+
+#green-line {
+  content: "";
+  display: block;
+  width: 20%;
+  height: 0.5rem;
+  background-color: var(--green);
+  border-radius: 2rem;
+  margin: 4rem auto;
+}
+
+/* Section Kuliner */
+
+#kuliner div.kuliner-box {
+  padding: 7rem 0;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+#kuliner div.kuliner-box h1.kuliner-title {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+
+#kuliner div.kuliner-desc {
+  margin-left: 2rem;
+}
+
+#kuliner div.kuliner-desc p {
+  font-size: 1rem;
+  line-height: 2;
+}
+
+#kuliner .btn-selengkapnya {
+  padding: 1rem 3rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: var(--foreground);
+  border: 2px solid var(--foreground);
+  border-radius: 50px;
+  transition: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+#kuliner .btn-selengkapnya:hover {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+#kuliner img.img-kuliner {
+  object-fit: cover;
+  width: 80%;
+  border-radius: 4px;
+}
+
+#kuliner > div.kuliner-box {
+  color: var(--foreground);
+}
+
+#kuliner .kuliner-box-light {
+  background-color: var(--background);
+}
+
+#kuliner .kuliner-box-dark {
+  background-color: var(--clr-secondary);
+}
+
+/* Footer */
+
+#footer {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 1200px) {
+  :root {
+    font-size: 12px;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  #showcase .text-box {
+    width: 90%;
+  }
+
+  #kuliner .kuliner-box {
+    padding: 40px 0px 100px;
+  }
+
+  #kuliner div.kuliner-box {
+    padding: 80px 0;
+  }
+
+  #kuliner .kuliner-box .container {
+    width: 90% !important;
+  }
+
+  #kuliner .kuliner-desc {
+    margin-left: 0 !important;
+  }
+
+  #kuliner .kuliner-desc p {
+    text-align: justify;
+  }
+
+  #kuliner .img-kuliner {
+    width: 100% !important;
+    margin: 2rem 0 2rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  #kuliner .kuliner-desc p {
+    font-size: 1rem !important;
+  }
+
+  #kuliner .kuliner-desc .btn-selengkapnya {
+    font-size: 0.8rem !important;
+  }
+}

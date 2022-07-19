@@ -1,0 +1,258 @@
+/* global styling */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #000;
+}
+
+h1,
+h2,
+p {
+  margin-bottom: 2rem;
+}
+
+/* navbar */
+
+nav {
+  font-size: 1.75rem;
+  padding: 2rem 0 !important;
+  transition: .2s;
+}
+
+nav.scrolled {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+nav .btn-hamburger {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+}
+
+nav .navbar-brand {
+  margin-left: 5rem;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+nav span {
+  font-size: 1.75rem;
+}
+
+.text-green {
+  color: #37b00c;
+}
+
+/* offcanvas */
+
+nav .offcanvas ul li a {
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: block;
+  padding: 1rem 5rem;
+  width: 100%;
+}
+
+nav .offcanvas ul li a:hover {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+nav .offcanvas ul li a.active {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+/* Section Hero */
+
+#hero {
+  padding: 10rem 0 8rem 0;
+}
+
+#hero h1 {
+  font-family: 'Sacramento', cursive;
+  font-size: 5rem;
+}
+
+#hero .carousel-item {
+  height: 30rem;
+  padding: 0 10rem;
+}
+
+#hero .carousel img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+#hero .backToTop {
+  height: 5rem;
+  width: 5rem;
+  position: fixed;
+  bottom: -6rem;
+  right: 2rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 2.5rem;
+  border-radius: 20%;
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, .8);
+  transition: .3s ease;
+  opacity: 0;
+}
+
+#hero .backToTop:hover {
+  cursor: pointer;
+  padding-top: 1.9rem;
+}
+
+#hero .backToTop.show {
+  bottom: 2rem;
+  opacity: 1;
+}
+
+/* Section content */
+
+#content {
+  padding-bottom: 10rem;
+}
+
+#content .daftar-isi {
+  background-color: #F5F5F5;
+  padding: 2rem;
+  position: sticky;
+  top: 9rem;
+}
+
+#content .daftar-isi h5 {
+  margin-bottom: 1rem;
+  color: rgb(146, 146, 146);
+}
+
+#content .daftar-isi h5::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: rgba(146, 146, 146, .6);
+  display: block;
+  margin-top: .5rem;
+}
+
+#content .daftar-isi li {
+  margin: .3rem 0;
+}
+
+#content .daftar-isi-link {
+  text-decoration: none;
+  color: #4664B1;
+  font-weight: 500;
+}
+
+#content h1 {
+  font-weight: bold;
+}
+
+#content .main-content ul,
+#content .main-content ol {
+  padding: 0 1.25rem;
+}
+
+#content .main-content div:not(:first-child) {
+  margin-top: 6rem;
+}
+
+#content .main-content p,
+#content .cara-membuat li {
+  font-family: "EB Garamond", serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+#content .sejarah img {
+  margin-bottom: 2rem;
+}
+
+#content .cara-membuat h5 {
+  font-family: "EB Garamond", serif;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+
+#content .info-lainnya {
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border: 1px solid rgba(0, 0, 0, .2);
+  font-size: .8rem;
+  position: sticky;
+  top: 9rem;
+}
+
+#content .info-lainnya .img-container {
+  margin-bottom: 1rem;
+}
+
+#content .info-lainnya .container-fluid .row .col {
+  padding: .75rem 0;
+}
+
+#content .info-lainnya .container-fluid .row .col:nth-child(1) {
+  font-weight: 600;
+}
+
+/* Small screen */
+
+@media (max-width: 768px) {
+  .carousel-item {
+    height: 200px !important;
+  }
+}
+
+/* Medium Screen */
+
+@media (max-width: 1200px) {
+  :root {
+    font-size: 12px;
+  }
+
+  .container {
+    width: 90% !important;
+  }
+
+  #hero {
+    padding-bottom: 3rem !important;
+  }
+
+  .carousel-item {
+    padding: 0 !important;
+  }
+
+  .carousel-item img {
+    width: 100%;
+  }
+
+  #content .daftar-isi {
+    margin-bottom: 2rem;
+  }
+
+  .daftar-isi,
+  .info-lainnya {
+    position: static !important;
+  }
+}

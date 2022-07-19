@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gudeg Yogyakarta</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Stylesheet -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+
+    <header>
+      <!-- navbar -->
+      <nav class="navbar fixed-top">
+        <div class="container w-75">
+          <button
+            class="btn-hamburger bg-transparent border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions"
+            aria-controls="offcanvasWithBothOptions"
+          >
+            <i class="fa-solid fa-lg fa-bars"></i>
+          </button>
+          <a class="navbar-brand me-auto" href="/index.html"
+            >Kuliner.<span class="text-green">id</span></a
+          >
+        </div>
+
+        <!-- offcanvas -->
+        <div
+          class="offcanvas offcanvas-start text-black"
+          data-bs-scroll="true"
+          tabindex="-1"
+          id="offcanvasWithBothOptions"
+          aria-labelledby="offcanvasWithBothOptionsLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body p-0">
+            <a class="navbar-brand" href="/index.html"
+              >Kuliner.<span class="text-green">id</span></a
+            >
+
+            <ul class="navbar-nav pt-5">
+              <li class="nav-item">
+                <a class="nav-link active" href="/Sumatra/index.html"
+                  >Kuliner Sumatra</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Jawa/index.html">Kuliner Jawa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Kalimantan/">Kuliner Kalimantan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Sulawesi/index.html"
+                  >Kuliner Sulawesi</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Papua/index.html">Kuliner Papua</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main -->
+
+    <main>
+      <!-- Section Hero -->
+      <section id="hero">
+        <h1 class="text-center text-capitalize">gudeg Yogyakarta</h1>
+
+        <!-- Carousel -->
+        <div class="container w-75">
+          <div
+            id="carouselExampleFade"
+            class="carousel slide carousel-dark carousel-fade mx-auto"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="/Jawa/kuliner-jawa/img/gambar16.jpg"
+                  class="d-block w-100"
+                  alt="img-soto-kudus"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="/Jawa/kuliner-jawa/img/gambar17.jpg"
+                  class="d-block w-100"
+                  alt="img-soto-kudus"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="/Jawa/kuliner-jawa/img/gambar18.jpg"
+                  class="d-block w-100"
+                  alt="img-soto-kudus"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleFade"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleFade"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <!-- Button scroll to top -->
+        <div class="backToTop bg-danger text-white">
+          <i class="fa-solid fa-lg fa-arrow-up"></i>
+        </div>
+      </section>
+
+      <!-- Section Content -->
+
+      <section id="content">
+        <div class="container-fluid">
+          <div class="row d-flex justify-content-center">
+            <!-- Daftar Isi -->
+            <div class="col-lg-3 content">
+              <div class="daftar-isi">
+                <h5>Daftar Isi</h5>
+                <ul class="navbar-nav">
+                  <li>
+                    <a class="daftar-isi-link" href="#gudeg"
+                      >Gudeg Yogyakarta</a
+                    >
+                  </li>
+                  <li>
+                    <a class="daftar-isi-link" href="#sejarah">Sejarah</a>
+                  </li>
+                  <li>
+                    <a class="daftar-isi-link" href="#cara-membuat"
+                      >Cara Membuat</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Konten Utama -->
+            <div class="col-lg-6 content">
+              <div class="main-content">
+                <!-- Deskripsi -->
+                <div id="gudeg" class="rendang">
+                  <h1>Gudeg</h1>
+                  <p>
+                    Gudeg (bahasa Jawa: ꦒꦸꦝꦼꦒ꧀, translit. Gudhěg) adalah
+                    hidangan khas Provinsi Yogyakarta dan Jawa Tengah yang
+                    terbuat dari nangka muda yang dimasak dengan santan. Perlu
+                    waktu berjam-jam untuk membuat hidangan ini. Warna coklat
+                    biasanya dihasilkan oleh daun jati yang dimasak bersamaan.
+                    Gudeg biasanya dimakan dengan nasi dan disajikan dengan kuah
+                    santan kental (areh), ayam kampung, telur, tempe, tahu dan
+                    sambal goreng krecek.
+                    <br />
+                    Gudeg sangat populer di Jawa, hidangan ini merupakan
+                    hidangan populer baik sebagai masakan rumahan maupun
+                    hidangan jalanan. Gudeg juga diproduksi secara industri
+                    sebagai makanan kaleng. Gudeg juga bisa ditemui di luar
+                    Indonesia, khususnya di negara tetangga seperti Malaysia dan
+                    Singapura.
+                  </p>
+                  <p>
+                    Soto kudus tidak ada yang menggunakan daging sapi karena
+                    penghormatan muslim Kudus terhadap agama Hindu, yang mana
+                    sapi adalah hewan yang mereka anggap suci. Namun hal ini
+                    hanya sebatas anjuran yang berasal dari Sunan Kudus. Dia
+                    mengajari Orang Islam untuk menghargai agama lain, khususnya
+                    agama Hindu.Ini disebabkan ketika itu di Kudus banyak orang
+                    yang memeluk agama Hindu. Hal ini merupakan bentuk toleransi
+                    yang telah diajarkan oleh Sunan Kudus pada pemeluk agama
+                    Islam yang tinggal di daerah Kudus. Budaya itu pun masih
+                    berlaku sampai sekarang.
+                    <br /><br />
+                    <b class="text-uppercase">Penyajian</b>
+                    <br />
+                    Jika disajikan sendiri, gudeg dapat dianggap sebagai makanan
+                    vegetarian, karena hanya terdiri dari nangka mentah dan
+                    santan. Namun, gudeg biasanya disajikan dengan telur atau
+                    daging ayam. Gudeg sering kali disajikan dengan nasi putih
+                    dan ayam, baik opor ayam atau ayam goreng, telur pindang,
+                    opor telur atau telur rebus biasa, tahu dan/atau tempe,
+                    serta sambel goreng krecek (rebusan yang terbuat dari kulit
+                    sapi renyah). <br />
+                    Gudeg dapat dikemas ke dalam besek (kotak yang terbuat dari
+                    bambu) atau kendil (guci tanah liat), atau kalengan. Gudeg
+                    kalengan bisa bertahan hingga satu tahun, meski rasanya
+                    tidak sebagus yang baru dimasak. <br />
+                    Warung dan restoran yang menyajikan gudeg dapat ditemukan di
+                    seluruh kota di Indonesia, seperti Jabodetabek. Gudeg adalah
+                    hidangan populer di restoran Jawa, dan dapat ditemukan di
+                    negara tetangga, seperti Singapura.
+                  </p>
+                  <br />
+                  <b class="text-uppercase">Varian</b>
+                  <p>
+                    Ada beberapa jenis gudeg; kering, basah, gaya Yogyakarta,
+                    gaya Solo dan gaya Jawa Timur. Gudeg kering hanya memiliki
+                    sedikit santan dan memiliki sedikit kuah. Gudeg basah
+                    mengandung lebih banyak santan. Gudeg yang paling umum
+                    berasal dari Yogyakarta, dan biasanya lebih manis, lebih
+                    kering dan berwarna kemerahan karena penambahan daun jati
+                    sebagai pewarna. Gudeg solo dari kota Surakarta lebih berair
+                    dan berkuah, banyak santan, dan berwarna keputihan karena
+                    umumnya tidak ditambahkan daun jati. Gudeg Yogyakarta biasa
+                    disebut "gudeg merah", sedangkan gudeg Solo disebut juga
+                    "gudeg putih". Gudeg gaya Jawa Timur memiliki rasa yang
+                    lebih pedas dibandingkan dengan gudeg gaya Yogyakarta yang
+                    lebih manis. <br />
+                    Gudeg secara tradisional diasosiasikan dengan Yogyakarta,
+                    dan Yogyakarta terkadang dijuluki "Kota Gudeg" (kota gudeg).
+                    Pusat restoran gudeg Yogyakarta berada di kawasan Wijilan
+                    sebelah timur Kraton Yogyakarta. <br />
+                    Seperti halnya banyak masakan Indonesia lainnya, berbagai
+                    jenis Gudeg secara tradisional dianggap sebagai kuliner khas
+                    kota atau daerah tertentu dan dijuluki dengan nama
+                    "geografis" masing-masing. Oleh karena itu, Gudeg merah
+                    sering disebut gudeg "Yogyakarta", dan Gudeg putih disebut
+                    gudeg "Surakarta", sesuai dengan nama kota asalnya di Jawa
+                    Tengah tersebut.
+                  </p>
+                </div>
+                <!-- Sejarah -->
+                <div id="sejarah" class="sejarah">
+                  <h1>Sejarah</h1>
+                  <p>
+                    Gudeg dibuat dari buah nangka yang tumbuh di banyak pulau di
+                    Kepulauan Melayu, khususnya di Jawa, dan merupakan tanaman
+                    pangan yang cukup penting. Sejumlah besar rempah-rempah dan
+                    bumbu tertentu digunakan dalam proses perebusan, rempah ini
+                    juga meningkatkan masa simpan gudeg. <br />
+
+                    Di Jawa Tengah, ada legenda yang mengaitkan asal usul Gudeg
+                    dengan berdirinya Kesultanan Mataram pada akhir abad ke-16.
+                    Dikisahkan bahwa pada saat itu pejuang yang membuka hutan
+                    untuk pembangunan ibu kota negara baru di wilayah Yogyakarta
+                    saat ini tidak mendapat pasokan makanan yang memadai.
+                    Sementara itu hanya pohon nangka dan kelapa yang tumbuh
+                    subur di hutan tersebut. Saat masih muda buah nangka keras,
+                    dan tidak dapat dimakan mentah, mereka pun merebus buah
+                    nangka muda dalam santan dalam panci logam besar dan
+                    mengaduknya dengan papan kayu. Proses memasak seperti ini
+                    dalam bahasa jawa sehari-hari disebut hangudek (jw.
+                    Hangudek)—"mengaduk". Dari kata inilah menurut legenda,
+                    menjadi asal mula nama makanan yang ditemukan oleh prajurit
+                    Mataram tersebut, "Gudeg".
+                  </p>
+                </div>
+                <!-- Cara Membuat -->
+                <div id="cara-membuat" class="cara-membuat">
+                  <h1>Cara Membuat</h1>
+                  <iframe
+                    width="100%"
+                    height="400"
+                    src="https://www.youtube.com/embed/3tGj1B90Uns"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                  <h5 class="fw-bold">Bahan bahan</h5>
+                  <ul>
+                    <li>1 kg nangka muda</li>
+                    <li>5 butir telur ayam rebus, kupas</li>
+                    <li>2 lembar daun salam</li>
+                    <li>3 lembar daun jeruk</li>
+                    <li>3 cm lengkuas, memarkan</li>
+                    <li>120 g gula Jawa yang cokelat tua</li>
+                    <li>1.5 liter santan sedang</li>
+                    <li>500 ml santan kental</li>
+                  </ul>
+                  <h5 class="fw-bold">Bumbu</h5>
+                  <ul>
+                    <li>8 butir bawang merah</li>
+                    <li>5 siung bawang putih</li>
+                    <li>5 butir kemiri</li>
+                    <li>1 sdm ketumbar</li>
+                    <li>1 potong terasi</li>
+                    <li>1/4 sdt jintan</li>
+                    <li>2 sdt garam</li>
+                  </ul>
+                  <h5 class="fw-bold">Pelengkap</h5>
+                  <ul>
+                    <li>Sambal goreng krecek</li>
+                    <li>Opor ayam</li>
+                    <li>Sambal bajak</li>
+                  </ul>
+
+                  <h5 class="fw-bold">Cara Membuat Gudeg :</h5>
+                  <ol>
+                    <li>
+                      Potong nangka muda berbentuk dadu besar. Rebus nangka muda
+                      dalam air atau air kelapa tua secukupnya hingga lunak.
+                      Angkat dan tiriskan nangka muda.
+                    </li>
+                    <li>
+                      Bumbu Halus: Haluskan semua bahan bumbu dengan blender
+                      atau ulekan hingga halus benar.
+                    </li>
+                    <li>
+                      Masukkan nangka muda dan telur ke dalam panci. Tuangi
+                      santan, masukkan bumbu halus, daun salam, daun jeruk,
+                      lengkuas dan gula merah.
+                    </li>
+                    <li>
+                      Masak dengan api sedang hingga bumbu meresap dan kuahnya
+                      susut.
+                    </li>
+                    <li>
+                      Tuangkan santan kental. Masak dengan api hingga kuah
+                      benar-benar susut. Matikan api.
+                    </li>
+                    <li>Sajikan gudeg dengan pelengkapnya.</li>
+                  </ol>
+                  <h5 class="fw-bold">Tips :</h5>
+                  <ol>
+                    <li>
+                      Untuk membuat gudeg yang enak pilih jenis nangka muda yang
+                      merah. Teksturnya kokoh dengan warna agak cokelat
+                      kemerahan.
+                    </li>
+                    <li>
+                      Untuk mendapatkan warna merah cokelat, bisa dipakai daun
+                      jati atau daun jambu biji yang ditaruh di bagian bawah
+                      panci.
+                    </li>
+                    <li>
+                      Jika suka gudeg kering, masak gudeg hingga airnya
+                      benar-benar habis atau hampir kering.
+                    </li>
+                    <li>
+                      Untuk sisa gudeg bisa disimpan dalam wadah bertutup dan
+                      taruh di lemari es. Hangatkan kembali dengan cara dikukus.
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+
+            <!-- Info lainnya -->
+            <div class="col-lg-3 content">
+              <div class="info-lainnya">
+                <div class="img-container">
+                  <img
+                    src="/Jawa/kuliner-jawa/img/gambar19.jpg"
+                    alt="img-soto-kudus"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col">Nama lain</div>
+                    <div class="col text-capitalize">Gudeg Yogyakarta</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">Tempat Asal</div>
+                    <div class="col">Indonesia</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">Daerah</div>
+                    <div class="col">Yogyakarta, DI Yogyakarta</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">Bahan Utama</div>
+                    <div class="col">
+                      Nangka muda, santan, gula aren, cabai, aneka bumbu, ayam,
+                      telur, tempe (opsional)
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">Informasi lain</div>
+                    <div class="col">
+                      Gudeg Kering, Gudeg Solo, Gudeg Putih dan disarankan saat
+                      panas atau suhu ruangan
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="bg-black text-white text-center bg-black p-4">
+      &copy; 2022 Kelompok 02. All Rights Reserved
+    </footer>
+
+    <!-- Javascript -->
+    <script
+      src="https://kit.fontawesome.com/702dc10f84.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

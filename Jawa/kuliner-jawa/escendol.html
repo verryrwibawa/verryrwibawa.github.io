@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Es Cendol</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Stylesheet -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Section Hero -->
+
+    <section id="hero">
+      <!-- navbar -->
+      <nav class="navbar fixed-top">
+        <div class="container w-75">
+          <button
+            class="btn-hamburger bg-transparent border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions"
+            aria-controls="offcanvasWithBothOptions"
+          >
+            <i class="fa-solid fa-lg fa-bars"></i>
+          </button>
+          <a class="navbar-brand me-auto" href="/index.html"
+            >Kuliner.<span class="text-green">id</span></a
+          >
+        </div>
+
+        <!-- offcanvas -->
+        <div
+          class="offcanvas offcanvas-start text-black"
+          data-bs-scroll="true"
+          tabindex="-1"
+          id="offcanvasWithBothOptions"
+          aria-labelledby="offcanvasWithBothOptionsLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body p-0">
+            <a class="navbar-brand" href="/index.html"
+              >Kuliner.<span class="text-green">id</span></a
+            >
+
+            <ul class="navbar-nav pt-5">
+              <li class="nav-item">
+                <a class="nav-link" href="/Sumatra/index.html"
+                  >Kuliner Sumatra</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/Jawa/index.html"
+                  >Kuliner Jawa</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Kalimantan/index.html"
+                  >Kuliner Kalimantan</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Sulawesi/index.html"
+                  >Kuliner Sulawesi</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Papua/index.html">Kuliner Papua</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <h1 class="text-center text-capitalize">es cendol</h1>
+
+      <!-- Carousel -->
+      <div class="container w-75">
+        <div
+          id="carouselExampleFade"
+          class="carousel slide carousel-dark carousel-fade mx-auto"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="/Jawa/kuliner-jawa/img/gambar36.png"
+                class="d-block w-100"
+                alt="img-wedang-jahe"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/Jawa/kuliner-jawa/img/gambar37.webp"
+                class="d-block w-100"
+                alt="img-wedang-jahe"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/Jawa/kuliner-jawa/img/gambar38.jpeg"
+                class="d-block w-100"
+                alt="img-wedang-jahe"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <!-- Button scroll to top -->
+      <div class="backToTop bg-danger text-white">
+        <i class="fa-solid fa-lg fa-arrow-up"></i>
+      </div>
+    </section>
+
+    <!-- Section Content -->
+
+    <section id="content">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <!-- Daftar Isi -->
+          <div class="col-lg-3">
+            <div class="daftar-isi">
+              <h5>Daftar Isi</h5>
+              <ul class="navbar-nav">
+                <li>
+                  <a class="daftar-isi-link" href="#escendol">Es Cendol</a>
+                </li>
+                <li><a class="daftar-isi-link" href="#sejarah">Sejarah</a></li>
+                <li>
+                  <a class="daftar-isi-link" href="#cara-membuat"
+                    >Cara Membuat</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Konten Utama -->
+          <div class="col-lg-6">
+            <div class="main-content">
+              <!-- Deskripsi -->
+              <div id="escendol" class="rendang">
+                <h1 class="text-capitalize">es cendol</h1>
+                <p>
+                  Es cendol adalah penganan yang dibuat dari tepung beras dan
+                  sebagainya yang dibentuk dengan penyaring, kemudian dicampur
+                  dengan air gula dan santan. Cendol merupakan minuman penutup
+                  es manis yang mengandung tetesan tepung beras hijau, santan,
+                  dan sirup gula aren. Cendol populer di Indonesia dan Asia
+                  Tenggara lainnya seperti Brunei, Cambodia, Malaysia,
+                  Singapura, Thailand, Vietnam, dan Myanmar. Cendol sebagai
+                  minuman tradisional khas Indonesia ini dulunya terbuat dari
+                  tepung hunkwe, tetapi kini cendol terbuat dari tepung beras,
+                  disajikan dengan es parut serta gula merah cair dan santan.
+                  Minuman ini memiliki rasa yang manis dan gurih. Di daerah Jawa
+                  Barat, minuman ini dikenal dengan nama cendol, sedangkan di
+                  Jawa Tengah dikenal dengan nama es dawet, khususnya Kabupaten
+                  Banjarnegara dengan minuman khasnya es dawet "ayu". Berkembang
+                  kepercayaan populer dalam masyarakat Indonesia bahwa istilah
+                  "cendol" mungkin sekali berasal dari kata "jendol", yang
+                  ditemukan dalam bahasa Sunda dan Jawa hal ini merujuk pada
+                  sensasi jendolan yang dirasakan ketika butiran cendol melalui
+                  mulut kala meminum es cendol.
+                </p>
+                <p>
+                  Pada saat membuat cendol, tepung beras diolah dengan diberi
+                  pewarna hijau dan dicetak melalui alat khusus, sehingga
+                  berbentuk buliran. Pewarna yang digunakan awalnya adalah
+                  pewarna alami dari daun pandan, tetapi saat ini telah
+                  digunakan pewarna makanan buatan. Es cendol merambah hingga ke
+                  penang Malaysia, cendol dibuat dengan cara mengayak kukusan
+                  tepung beras yang diwarnai dengan daun suji sehingga diperoleh
+                  bentuk bulat lonjong yang lancip di ujungnya. Di penang, minum
+                  cendol disebut 'nyendol'. Minuman ini biasanya disajikan
+                  sebagai pencuci mulut atau sebagai makanan selingan. Minuman
+                  ini sesuai disajikan disiang hari pada saat hari panas.
+                </p>
+              </div>
+              <!-- Sejarah -->
+              <div id="sejarah" class="sejarah">
+                <h1>Sejarah</h1>
+                <p>
+                  Catatan tentang kata cendol atau tjendol dapat ditelusuri pada
+                  banyak kamus dan buku abad ke-19 di Hindia Belanda. Salah satu
+                  catatan tertua tentang kata tjendol yang diketahui tercantum
+                  pada Oost-Indisch kookboek atau buku resep Hindia Timur
+                  bertahun 1866. Buku ini memasukkan resep cendol dengan judul
+                  "Tjendol of Dawet" yang menandakan bahwa cendol dan dawet
+                  digunakan secara bersinonim pada masa itu. Dalam kamus
+                  Supplement op het Maleisch-Nederduitsch Woordenboek (1869)
+                  oleh Jan Pijnappel (Gz.), tjendol dijelaskan sebagai semacam
+                  minuman atau pasta encer yang terbuat dari sagu, santan, gula
+                  dan garam. Cendol berasal dari wilayah bagian barat pulau Jawa
+                  (Tanah Sunda; yang kini merupakan bagian dari provinsi Jawa
+                  Barat, provinsi Banten, dan provinsi Jakarta), sedangkan dawet
+                  berasal dari sebahagian Tanah Jawa yaitu Banjarnegara.
+                </p>
+              </div>
+              <!-- Cara Membuat -->
+              <div id="cara-membuat" class="cara-membuat">
+                <h1>Cara Membuat</h1>
+                <iframe
+                  width="100%"
+                  height="400"
+                  src="https://www.youtube.com/embed/Bn3lek3DxVk"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+                <h5 class="fw-bold text-capitalize">Bahan untuk cendol :</h5>
+                <ul>
+                  <li>175 gram tepung beras</li>
+                  <li>75 gram tepung kanji atau tapioka</li>
+                  <li>1/2 sendok teh garam</li>
+                  <li>Pasta pandan secukupnya</li>
+                  <li>800 ml air</li>
+                  <li>Air es secukupnya untuk menampung cendol</li>
+                </ul>
+
+                <h5 class="fw-bold text-capitalize">bahan saus gula merah :</h5>
+                <ul>
+                  <li>250 gram gula merah disisir</li>
+                  <li>5 sendok makan gula pasir</li>
+                  <li>400 ml air</li>
+                  <li>1 lembar daun pandan diikat simpul</li>
+                </ul>
+
+                <h5 class="fw-bold text-capitalize">bahan santan :</h5>
+                <ul>
+                  <li>1 liter air santan dari 1 butir kelapa</li>
+                  <li>1/2 sendok teh garam</li>
+                  <li>2 lembar daun pandan diikat simpul</li>
+                </ul>
+
+                <h5 class="fw-bold text-capitalize">
+                  cara membuat es cendol :
+                </h5>
+                <ol>
+                  <li>
+                    Siapkan semua bahan yang dibutuhkan untuk membuat es cendol
+                    dawet.
+                  </li>
+                  <li>
+                    Siapkan panci bersih dan campurkan tepung beras, tepung
+                    kanji, dan garam.
+                  </li>
+                  <li>
+                    Tuang air dan aduk rata sampai adonan tercampur rata dan
+                    tidak ada adonan yang bergerindil.
+                  </li>
+                  <li>
+                    Tambahkan pasta pandan secukupnya sampai adonan berubah
+                    hijau. aduk rata.
+                  </li>
+                  <li>
+                    Masak adonan di atas api sedang sambil terus diaduk-aduk
+                    sampai matang meletup-letup, teksturnya halus, dan molor
+                    tidak putus jika diangkat dengan sendok.
+                  </li>
+                  <li>
+                    Setelah adonan cendol jadi, matikan kompor dan siapkan
+                    baskom besar berisi air dingin untuk menampung cendol.
+                  </li>
+                  <li>
+                    Tuang adonan cendol yang masih panas ke dalam cetakan cendol
+                    lalu tekan dan tampung ke dalam baskom air es. kalau tidak
+                    punya, kamu bisa menggunakan serok dengan lubang besar untuk
+                    mencetak cendol.
+                  </li>
+                  <li>
+                    Lakukan proses di atas sampai semua bahan cendol habis.
+                    sisihkan.
+                  </li>
+                </ol>
+                <h5 class="fw-bold text-capitalize">
+                  cara membuat saus gula merah dan santan :
+                </h5>
+                <ol>
+                  <li>
+                    Untuk membuat saus gula merah, siapkan panci dan campur
+                    semua bahannya yaitu gula merah sisir, gula pasir, air, dan
+                    daun pandan.
+                  </li>
+                  <li>
+                    Masak di atas api sedang sampai gula larut dan saus gula
+                    mengental. baru angkat dan diamkan sampai dingin.
+                  </li>
+                  <li>Selanjutnya, tinggal membuat bahan santannya.</li>
+                  <li>
+                    Siapkan panci lain yang masih bersih dan campurkan semua
+                    bahan santan yaitu air santan, garam, dan daun pandan.
+                  </li>
+                  <li>
+                    Masak santan di atas api sedang sambil terus diaduk sampai
+                    matang mendidih. angkat dan diamkan sampai dingin.
+                  </li>
+                </ol>
+                <h5 class="fw-bold text-capitalize">
+                  cara penyajian es cendol :
+                </h5>
+                <ol>
+                  <li>
+                    Jika semua bahan yang dibutuhkan untuk membuat es cendol
+                    dawet jadi, ambil 1 gelas saji.
+                  </li>
+                  <li>
+                    Isi bagian dalamnya dengan cendol dan es batu secukupnya.
+                  </li>
+                  <li>Selanjutnya, tinggal membuat bahan santannya.</li>
+                  <li>
+                    Siram dengan air santan dan beri saus gula merah secukupnya.
+                  </li>
+                  <li>
+                    Aduk rata dna es cendol dawet siap disajikan untuk keluarga
+                    tercinta.
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <!-- Info lainnya -->
+          <div class="col-lg-3">
+            <div class="info-lainnya">
+              <div class="img-container">
+                <img
+                  src="/Jawa/kuliner-jawa/img/gambar35.png"
+                  alt="img-peta-kudus"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col">Nama lain</div>
+                  <div class="col">
+                    es cendol (Jawa Barat, Indonesia) dawet (Jawa Tengah dan
+                    Timur, Indonesia)
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">Tempat Asal</div>
+                  <div class="col">Indonesia</div>
+                </div>
+                <div class="row">
+                  <div class="col">Daerah</div>
+                  <div class="col">Jawa Barat, Jawa Tengah, Jawa Timur</div>
+                </div>
+                <div class="row">
+                  <div class="col">Bahan Utama</div>
+                  <div class="col">Jahe, gula merah</div>
+                </div>
+                <div class="row">
+                  <div class="col">Informasi lain</div>
+                  <div class="col">
+                    Es Cendol ini populer di Indonesia [4] dan Asia Tenggara
+                    lainnya seperti Brunei, Cambodia, Malaysia, Singapura,
+                    Thailand, Vietnam, dan Myanmar.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white text-center bg-black p-4">
+      &copy; 2022 Kelompok 02. All Rights Reserved
+    </footer>
+
+    <!-- Javascript -->
+    <script
+      src="https://kit.fontawesome.com/702dc10f84.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
