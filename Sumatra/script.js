@@ -60,4 +60,12 @@ window.addEventListener("load", function () {
       $("body").removeClass("scrolled-100");
     }
   });
+
+  // Parallax
+  $(window).scroll(function () {
+    const parallax = $("#showcase");
+    let scrollPosition = window.scrollY;
+
+    parallax.css("background-position", "center " + scrollPosition * 0.5 + "px");
+  });
 });
