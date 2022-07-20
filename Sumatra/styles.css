@@ -63,7 +63,7 @@ body {
 #preloader {
   height: 100vh;
   z-index: 42;
-  background: #1f1f1f url(img/Loader.gif) no-repeat center center;
+  background: #1f1f1f url(/img/Loader.gif) no-repeat center center;
   background-size: 400px;
   display: block;
 }
