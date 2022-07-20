@@ -311,7 +311,8 @@ ion-icon {
   width: 9rem;
 }
 
-.showcase-text-container h1 {
+.showcase-text-container h1,
+.showcase-text-container p {
   text-shadow: 0 0 10px rgb(114 71 21 / 68%), 0 0 10px rgb(114 71 21 / 68%);
 }
 
