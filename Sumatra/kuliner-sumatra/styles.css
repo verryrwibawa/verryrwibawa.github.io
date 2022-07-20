@@ -55,7 +55,7 @@ p {
 #preloader {
   height: 100vh;
   z-index: 42;
-  background: #1f1f1f url(img/Loader.gif) no-repeat center center;
+  background: #1f1f1f url(/img/Loader.gif) no-repeat center center;
   background-size: 30%;
   display: block;
 }
@@ -126,10 +126,6 @@ footer {
   font-weight: 300;
   transition: 0s;
   font-size: 14px;
-}
-
-.nav-link-wrapper.scrolled li a {
-  color: var(--foreground);
 }
 
 /* dropdown menu */
@@ -206,13 +202,27 @@ body.dark-mode .dropdown-item:hover p {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-nav.scrolled {
-  top: -7rem;
+.offcanvas .nav-item {
+  position: relative;
 }
 
-nav.scrolled-bg {
-  background-color: var(--clr-op);
-  color: var(--foreground);
+.offcanvas .nav-item::before {
+  content: "";
+  height: 0;
+  width: 5px;
+  position: absolute;
+  left: 0;
+  background-color: var(--clr-accent);
+  transition: 0.2s;
+}
+
+.offcanvas .nav-item:hover {
+  color: var(--clr-accent);
+}
+
+.offcanvas .nav-item:hover:before,
+.offcanvas .nav-item.active:before {
+  height: 100%;
 }
 
 /* Button dark mode */
@@ -227,7 +237,7 @@ nav.scrolled-bg {
   transition: 0.5s;
 }
 
-.dark-mode-container.dark {
+.dark-mode .dark-mode-container {
   background-color: #444;
 }
 
@@ -258,6 +268,32 @@ ion-icon {
 
 .checkbox:checked ~ .ball {
   left: calc(100% - (16px + 3.5px));
+}
+
+/* on scroll */
+
+.scrolled nav {
+  top: -7rem;
+}
+
+.scrolled .daftar-isi,
+.scrolled .info-lainnya {
+  top: 1rem !important;
+}
+
+.scrolled-100 nav {
+  background-color: var(--clr-op);
+  color: var(--foreground);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.scrolled-100 .fa-bars,
+.scrolled-100 .navbar-brand {
+  color: var(--foreground) !important;
+}
+
+.scrolled-100 .nav-link-wrapper li a {
+  color: var(--foreground);
 }
 
 /* Section Hero */
@@ -364,7 +400,7 @@ ion-icon {
   padding: 2rem;
   position: sticky;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  top: 1rem;
+  top: 6rem;
   transition: 0.5s;
 }
 
@@ -374,13 +410,8 @@ ion-icon {
   color: var(--foreground);
   border: 1px solid rgba(0, 0, 0, 0.2);
   position: sticky;
-  top: 1rem;
-  transition: 0.5s;
-}
-
-#content .daftar-isi.scrolled,
-#content .info-lainnya.scrolled {
   top: 6rem;
+  transition: 0.5s;
 }
 
 #content .info-lainnya .img-container {

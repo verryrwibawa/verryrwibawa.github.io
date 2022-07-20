@@ -86,11 +86,6 @@ nav {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.navbar-brand.scrolled,
-.fa-bars.scrolled {
-  color: var(--foreground);
-}
-
 .text-green {
   color: var(--clr-accent);
 }
@@ -129,10 +124,6 @@ nav {
   transition: 0s;
   font-size: 14px;
   color: #ccc;
-}
-
-.nav-link-wrapper.scrolled li a {
-  color: var(--foreground);
 }
 
 /* dropdown menu */
@@ -213,13 +204,27 @@ body.dark-mode .dropdown-item:hover p {
   color: white !important;
 }
 
-nav.scrolled {
-  top: -7rem;
+.offcanvas .nav-item {
+  position: relative;
 }
 
-nav.scrolled-bg {
-  background-color: var(--clr-op);
-  color: var(--foreground);
+.offcanvas .nav-item::before {
+  content: "";
+  height: 0;
+  width: 5px;
+  position: absolute;
+  left: 0;
+  background-color: var(--clr-accent);
+  transition: 0.2s;
+}
+
+.offcanvas .nav-item:hover {
+  color: var(--clr-accent);
+}
+
+.offcanvas .nav-item:hover:before,
+.offcanvas .nav-item.active:before {
+  height: 100%;
 }
 
 /* Button dark mode */
@@ -234,7 +239,7 @@ nav.scrolled-bg {
   transition: 0.5s;
 }
 
-.dark-mode-container.dark {
+.dark-mode .dark-mode-container {
   background-color: #444;
 }
 
@@ -265,6 +270,27 @@ ion-icon {
 
 .checkbox:checked ~ .ball {
   left: calc(100% - (16px + 3.5px));
+}
+
+/* on scroll */
+
+.scrolled nav {
+  top: -7rem;
+}
+
+.scrolled-100 nav {
+  background-color: var(--clr-op);
+  color: var(--foreground);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.scrolled-100 .fa-bars,
+.scrolled-100 .navbar-brand {
+  color: var(--foreground) !important;
+}
+
+.scrolled-100 .nav-link-wrapper li a {
+  color: var(--foreground);
 }
 
 /* Section showcase */
