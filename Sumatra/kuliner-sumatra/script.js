@@ -8,6 +8,35 @@ window.addEventListener("load", function () {
     once: true,
   });
 
+  // --- Dark Mode ---
+  let darkMode = localStorage.getItem("darkMode");
+
+  const enableDarkMode = () => {
+    $("body").addClass("dark-mode");
+    localStorage.setItem("darkMode", "enabled");
+  };
+
+  const disableDarkMode = () => {
+    $("body").removeClass("dark-mode");
+    localStorage.setItem("darkMode", null);
+  };
+
+  if (darkMode === "enabled") {
+    enableDarkMode();
+    $("#checkbox").prop("checked", true);
+  }
+
+  // dark mode checked
+  $("#checkbox").change(function () {
+    darkMode = localStorage.getItem("darkMode");
+
+    if (darkMode !== "enabled") {
+      enableDarkMode();
+    } else {
+      disableDarkMode();
+    }
+  });
+
   // --- Change Navbar On Scroll ---
   let lastY = 0;
   let currentY = $(this).scrollTop();
