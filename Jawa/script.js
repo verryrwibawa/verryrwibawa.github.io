@@ -61,14 +61,6 @@ window.addEventListener("load", function () {
     }
   });
 
-  //parallax
-  $(window).scroll(function () {
-    const parallax = $("#showcase");
-    let scrollPosition = window.scrollY;
-
-    parallax.css("background-position", "center " + scrollPosition * 0.5 + "px");
-  });
-  
   // Parallax
   $(window).scroll(function () {
     const parallax = $("#showcase");

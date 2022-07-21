@@ -1,123 +1,615 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kalumpe</title>
-
+    <link rel="shortcut icon" href="/img/logoo.png" type="image/png" />
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Sacramento&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Sacramento&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
 
     <!-- CSS Stylesheet -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-</head>
+  </head>
 
-<body>
-
+  <body class="scrolled">
+    <div id="preloader" class="fixed-top w-100"></div>
     <!-- Header -->
-
     <header>
-        <!-- navbar -->
-        <nav class="navbar fixed-top">
-            <div class="container w-75">
-                <button class="btn-hamburger bg-transparent border-0" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
-                    <i class="fa-solid fa-lg fa-bars"></i>
-                </button>
-                <a class="navbar-brand me-auto" href="/index.html">Kuliner.<span class="text-green">id</span></a>
+      <!-- navbar -->
+      <nav class="fixed-top w-100 shadow scrolled">
+        <div class="container d-flex justify-content-between align-items-center h-100">
+          <!-- navbar left -->
+          <div class="navbar-left d-flex align-items-center h-100">
+            <button class="btn-hamburger bg-transparent border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+              <i class="fs-2 fa-solid fa-bars d-lg-none"></i>
+            </button>
+            <!-- navbar brand -->
+            <a class="navbar-brand ms-lg-0 ms-5" href="/index.html">Kuliner.<span class="text-green">id</span></a>
+            <div class="navbar-nav d-lg-flex flex-row d-none nav-link-wrapper">
+              <!-- Sumatra -->
+              <li class="nav-item dropdown">
+                <a class="nav-link text-uppercase dropdown-toggle dropdown-toggle" href="/Sumatra/index.html" id="navbarDropdownSumatra" role="button" aria-expanded="false" data-bs-toggle="dropdown">Sumatra</a>
+                <!-- Dropdown menu -->
+                <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownSumatra">
+                  <div class="d-flex">
+                    <!-- col 1 -->
+                    <div class="d-flex flex-column gap-1">
+                      <!-- Rendang -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Sumatra/kuliner-sumatra/rendang.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Sumatra/img/1 rendang.jpg" alt="img-rendang" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize text-capitalize">Rendang</h5>
+                              <p class="m-0 text-capitalize mt-1">Sumatra Barat</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- Bika Ambon -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Sumatra/kuliner-sumatra/bika-ambon.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Sumatra/img/2 Bika Ambon.jpg" alt="img-bika-ambon" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Bika Ambon</h5>
+                              <p class="m-0 text-capitalize mt-1">Medan</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- Otak-otak -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Sumatra/kuliner-sumatra/otak-otak.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Sumatra/img/3 Otak-otak.jpg" alt="img-otak-otak" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Otak-otak</h5>
+                              <p class="m-0 text-capitalize mt-1">Bangka Belitung</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </div>
+                    <!-- col 2 -->
+                    <div class="d-flex flex-column ms-3 gap-1">
+                      <!-- Pempek -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Sumatra/kuliner-sumatra/pempek.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Sumatra/img/4 Pempek.jpg" alt="img-pempek" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Pempek</h5>
+                              <p class="m-0 text-capitalize mt-1">Palembang</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- Sate Padang -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Sumatra/kuliner-sumatra/sate padang.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Sumatra/img/5 Sate Padang.jpg" alt="img-sate-padang" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Sate Padang</h5>
+                              <p class="m-0 text-capitalize mt-1">Sumatra Barat</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- Lainnya -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Sumatra/index.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/img/lainnya.jpg" alt="img-lainnya" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Lainnya</h5>
+                              <p class="m-0 text-capitalize mt-1">Kuliner Sumatra</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </div>
+                    <div></div>
+                  </div>
+                </ul>
+              </li>
+              <!-- Jawa -->
+              <li class="nav-item dropdown">
+                <a class="nav-link text-uppercase dropdown-toggle" href="/Jawa/index.html" id="navbarDropdownJawa" role="button" aria-expanded="false" data-bs-toggle="dropdown">Jawa</a>
+                <!-- Dropdown menu -->
+                <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownSumatra">
+                  <div class="d-flex">
+                    <!-- col 1 -->
+                    <div class="d-flex flex-column gap-1">
+                      <!-- Soto Kudus -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Jawa/kuliner-jawa/soto-kudus.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Jawa/img/gambar1.jpg" alt="soto-kudus" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize text-capitalize">Soto Kudus</h5>
+                              <p class="m-0 text-capitalize mt-1">Jawa Tengah</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- Lumpia Semarang -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Jawa/kuliner-jawa/lumpia-semarang.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Jawa/img/gambar2.jpg" alt="lumpia-semarang" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Lumpia Semarang</h5>
+                              <p class="m-0 text-capitalize mt-1">Semarang</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- Gudeg -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Jawa/kuliner-jawa/gudeg.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Jawa/img/gambar3.jpg" alt="gudeg" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Gudeg</h5>
+                              <p class="m-0 text-capitalize mt-1">Yogyakarta</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </div>
+                    <!-- col 2 -->
+                    <div class="d-flex flex-column ms-3 gap-1">
+                      <!-- Rawon -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Jawa/kuliner-jawa/rawon.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Jawa/img/gambar4.jpg" alt="rawon" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Rawon</h5>
+                              <p class="m-0 text-capitalize mt-1">Jawa Timur</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- Soto Lamongan -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Jawa/kuliner-jawa/soto-lamongan.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Jawa/img/gambar5.jpg" alt="soto-lamongan" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Soto Lamongan</h5>
+                              <p class="m-0 text-capitalize mt-1">Lamongan</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- Lainnya -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Jawa/index.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/img/lainnya.jpg" alt="" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Lainnya</h5>
+                              <p class="m-0 text-capitalize mt-1">Kuliner Jawa</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </div>
+                    <div></div>
+                  </div>
+                </ul>
+              </li>
+              <!-- Kalimantan -->
+              <li class="nav-item dropdown active">
+                <a class="nav-link text-uppercase dropdown-toggle" href="/Kalimantan/index.html" id="navbarDropdownKalimantan" role="button" aria-expanded="false" data-bs-toggle="dropdown">Kalimantan</a>
+                <!-- Dropdown menu -->
+                <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownKalimantan">
+                  <div class="d-flex">
+                    <!-- col 1 -->
+                    <div class="d-flex flex-column gap-1">
+                      <!-- Chai Kue -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Kalimantan/kuliner-kalimantan/Chai Kue.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Kalimantan/img/gambar 6.JPG" alt="chai-kue" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize text-capitalize">Chai Kue</h5>
+                              <p class="m-0 text-capitalize mt-1">Kalimantan Barat</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- Bingke Pontianak -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Kalimantan/kuliner-kalimantan/Bingke.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Kalimantan/img/gambar 8.jpg" alt="bingke" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Bingke Pontianak</h5>
+                              <p class="m-0 text-capitalize mt-1">Pontianak</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- Hekeng -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Kalimantan/kuliner-kalimantan/Hekeng.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Kalimantan/img/gambar 3.jpg" alt="Hekeng" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Hekeng</h5>
+                              <p class="m-0 text-capitalize mt-1">Kalimantan Barat</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </div>
+                    <!-- col 2 -->
+                    <div class="d-flex flex-column ms-3 gap-1">
+                      <!-- Kalumpe -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Kalimantan/kuliner-kalimantan/Kalumpe.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Kalimantan/img/gambar 2.jpg" alt="Kalumpe" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Kalumpe</h5>
+                              <p class="m-0 text-capitalize mt-1">Kalimantan Tengah</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- Gangan Humbut -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Kalimantan/kuliner-kalimantan/Gangan Humbut.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Kalimantan/img/gambar 4.jpg" alt="gangan-humbut" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Gangan Humbut</h5>
+                              <p class="m-0 text-capitalize mt-1">Banjarmasin</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- Lainnya -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Kalimantan/index.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/img/lainnya.jpg" alt="lainnya" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Lainnya</h5>
+                              <p class="m-0 text-capitalize mt-1">Kuliner Kalimantan</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </div>
+                    <div></div>
+                  </div>
+                </ul>
+              </li>
+              <!-- Sulawesi -->
+              <li class="nav-item dropdown">
+                <a class="nav-link text-uppercase dropdown-toggle" href="/Sulawesi/index.html" id="navbarDropdownSulawesi" role="button" aria-expanded="false" data-bs-toggle="dropdown">Sulawesi</a>
+                <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownSulawesi">
+                  <div class="d-flex">
+                    <!-- col 1 -->
+                    <div class="d-flex flex-column gap-1">
+                      <!-- Binte Buluhuta -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Sulawesi/kuliner-sulawesi/binte.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Sulawesi/img/2. binte.jpg" alt="chai-kue" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize text-capitalize">Binte Buluhuta</h5>
+                              <p class="m-0 text-capitalize mt-1">Gorontalo</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- Sate Gogos -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Sulawesi/kuliner-sulawesi/sate-gogos.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Sulawesi/img/5. sate.jpg" alt="sate-gogos" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Sate Gogos</h5>
+                              <p class="m-0 text-capitalize mt-1">Sulawesi Tenggara</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- Es Palu Butung -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Sulawesi/kuliner-sulawesi/es-palu.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Sulawesi/img/7.es pal.jpg" alt="es-palu-butung" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Es Palu Butung</h5>
+                              <p class="m-0 text-capitalize mt-1">Sulawesi Selatan</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </div>
+                    <!-- col 2 -->
+                    <div class="d-flex flex-column ms-3 gap-1">
+                      <!-- Sarabba -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Sulawesi/kuliner-sulawesi/sarabba.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Sulawesi/img/8. sarab.jpg" alt="sarabba" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Sarabba</h5>
+                              <p class="m-0 text-capitalize mt-1">Makassar</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- Saguer -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Sulawesi/kuliner-sulawesi/saguer.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Sulawesi/img/10. saguer.jpg" alt="saguer" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Saguer</h5>
+                              <p class="m-0 text-capitalize mt-1">Sulawesi Utara</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- Lainnya -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Sulawesi/index.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/img/lainnya.jpg" alt="lainnya" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Lainnya</h5>
+                              <p class="m-0 text-capitalize mt-1">Kuliner Sulawesi</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </div>
+                    <div></div>
+                  </div>
+                </ul>
+              </li>
+              <!-- Papua -->
+              <li class="nav-item dropdown">
+                <a class="nav-link text-uppercase dropdown-toggle" href="/Papua/index.html" id="navbarDropdownPapua" role="button" aria-expanded="false" data-bs-toggle="dropdown">Papua</a>
+                <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdownPapua">
+                  <div class="d-flex">
+                    <!-- col 1 -->
+                    <div class="d-flex flex-column gap-1">
+                      <!-- Sagu Lempeng -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="#">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Papua/img/sagu lempeng.png" alt="sagu-lempeng" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize text-capitalize">Sagu Lempeng</h5>
+                              <p class="m-0 text-capitalize mt-1">Papua</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- Aunu Sanebre -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="#">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Papua/img/aunu sanebre.jpg" alt="aunu-sanebre" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Aunu Sanebre</h5>
+                              <p class="m-0 text-capitalize mt-1">Papua</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- Kue Lontar -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="#">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Papua/img/kue lontar.jpg" alt="kue-lontar" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Kue Lontar</h5>
+                              <p class="m-0 text-capitalize mt-1">Papua</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </div>
+                    <!-- col 2 -->
+                    <div class="d-flex flex-column ms-3 gap-1">
+                      <!-- Ikan Bakar Manokwari -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="#">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Papua/img/ikan bakar manukwari.jpg" alt="ikan-bakar-manokwari" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Ikan Bakar Manokwari</h5>
+                              <p class="m-0 text-capitalize mt-1">Manokwari</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- Ikan Bumbu Kuning -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="#">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/Papua/img/ikan bumbu kuning.jpg" alt="ikan-bumbu-kuning" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Ikan Bumbu Kuning</h5>
+                              <p class="m-0 text-capitalize mt-1">Papua</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <!-- Lainnya -->
+                      <li>
+                        <a class="dropdown-item text-uppercase" href="/Papua/index.html">
+                          <div class="d-flex gap-3 text-black">
+                            <div>
+                              <img src="/img/lainnya.jpg" alt="" height="48px" width="48px" class="img-dropdown" />
+                            </div>
+                            <div>
+                              <h5 class="m-0 fs-6 text-capitalize">Lainnya</h5>
+                              <p class="m-0 text-capitalize mt-1">Kuliner Papua</p>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </div>
+                    <div></div>
+                  </div>
+                </ul>
+              </li>
             </div>
+          </div>
 
-            <!-- offcanvas -->
-            <div class="offcanvas offcanvas-start text-black" data-bs-scroll="true" tabindex="-1"
-                id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body p-0">
-                    <a class="navbar-brand" href="/index.html">Kuliner.<span class="text-green">id</span></a>
+          <!-- Button dark mode -->
+          <div class="d-flex align-items-center position-relative justify-content-between dark-mode-container">
+            <input type="checkbox" class="checkbox" id="checkbox" />
+            <div class="ball"></div>
+          </div>
+        </div>
 
-                    <ul class="navbar-nav pt-5">
-                        <li class="nav-item"><a class="nav-link" href="/Sumatra/index.html">Kuliner Sumatra</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/Jawa/index.html">Kuliner Jawa</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="/Kalimantan/">Kuliner Kalimantan</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/Sulawesi/index.html">Kuliner Sulawesi</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/Papua/index.html">Kuliner Papua</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <!-- offcanvas -->
+        <div class="offcanvas offcanvas-start text-black" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+          <div class="offcanvas-header">
+            <button type="button" class="ms-auto bg-transparent border-0 d-flex align-items-center" data-bs-dismiss="offcanvas" aria-label="Close"><ion-icon name="close-outline" class="text-white fs-1"></ion-icon></button>
+          </div>
+          <div class="offcanvas-body p-0">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link px-5" href="/Sumatra/index.html">Sumatra</a></li>
+              <li class="nav-item"><a class="nav-link px-5" href="/Jawa/index.html">Jawa</a></li>
+              <li class="nav-item active"><a class="nav-link px-5" href="/Kalimantan/index.html">Kalimantan</a></li>
+              <li class="nav-item"><a class="nav-link px-5" href="/Sulawesi/index.html">Sulawesi</a></li>
+              <li class="nav-item"><a class="nav-link px-5" href="/Papua/index.html">Papua</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <!-- Main -->
-
     <main>
-        <!-- Section Hero -->
-        <section id="hero">
-            <h1 class="text-center">Kalumpe</h1>
+      <!-- Section Hero -->
+      <section id="hero">
+        <h1 class="text-center" data-aos="fade-right">Kalumpe</h1>
 
-            <!-- Carousel -->
-            <div class="container w-75">
-                <div id="carouselExampleFade" class="carousel slide carousel-dark carousel-fade mx-auto"
-                    data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="img/kalumpe1.jpg" class="d-block w-100" alt="img-kalumpe">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/kalumpe2.jpg" class="d-block w-100" alt="img-kalumpe">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/kalumpe3.jpg" class="d-block w-100" alt="img-kalumpe">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
+        <!-- Carousel -->
+        <div class="container w-75" data-aos="fade-left">
+          <div id="carouselFade" class="carousel slide carousel-dark carousel-fade mx-auto" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/kalumpe1.jpg" class="d-block w-100" alt="img-kalumpe" />
+              </div>
+              <div class="carousel-item">
+                <img src="img/kalumpe2.jpg" class="d-block w-100" alt="img-kalumpe" />
+              </div>
+              <div class="carousel-item">
+                <img src="img/kalumpe3.jpg" class="d-block w-100" alt="img-kalumpe" />
+              </div>
             </div>
-            <!-- Button scroll to top -->
-            <div class="backToTop bg-danger text-white">
-                <i class="fa-solid fa-lg fa-arrow-up"></i>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselFade" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselFade" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+
+            <!-- Section Content -->
+      <section id="content">
+        <div class="container-fluid">
+          <div class="row d-flex justify-content-center">
+            <!-- Daftar Isi -->
+            <div class="col-lg-3 content" data-aos="fade-up">
+              <div class="daftar-isi">
+                <h5>Daftar Isi</h5>
+                <ul class="navbar-nav">
+                  <li><a class="daftar-isi-link" href="#kalumpe">Kalumpe</a></li>
+                  <li><a class="daftar-isi-link" href="#sejarah">Sejarah</a></li>
+                  <li><a class="daftar-isi-link" href="#cara-membuat">Cara Membuat</a></li>
+                </ul>
+              </div>
             </div>
-
-        </section>
-
-        <!-- Section Content -->
-
-        <section id="content">
-            <div class="container-fluid">
-                <div class="row d-flex justify-content-center">
-
-                    <!-- Daftar Isi -->
-                    <div class="col-lg-3 content">
-                        <div class="daftar-isi">
-                            <h5>Daftar Isi</h5>
-                            <ul class="navbar-nav">
-                                <li><a class="daftar-isi-link" href="#kalumpe">Kalumpe</a></li>
-                                <li><a class="daftar-isi-link" href="#sejarah">Sejarah</a></li>
-                                <li><a class="daftar-isi-link" href="#cara-membuat">Cara Membuat</a></li>
-                            </ul>
-                        </div>
-                    </div>
 
                     <!-- Konten Utama -->
-                    <div class="col-lg-6 content">
+                    <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
                         <div class="main-content">
                             <!-- Deskripsi -->
                             <div id="kalumpe" class="Kalumpe">
@@ -153,6 +645,7 @@
                                     <li>1 jahe</li>
                                     <li>Lada bubuk</li>
                                     <li>air</li>
+                                </ul>
                                 <h5 class="fw-bold">Cara membuat:</h5>
                                 <ol>
                                 <li>Siapkan bahan dasar, daun singkong dan tumbuk kasar.</li>
@@ -167,7 +660,7 @@
                     </div>
 
                     <!-- Info lainnya -->
-                    <div class="col-lg-3 content">
+                    <div class="col-lg-3 content" data-aos="fade-up" data-aos-delay="400">
                         <div class="info-lainnya">
                             <div class="img-container">
                                 <img src="img/kalumpe4.jpg" alt="img-kalumpe" class="img-fluid">
@@ -202,18 +695,17 @@
 
     </main>
 
-    <!-- Footer -->
+     <!-- Footer -->
 
-    <footer class="bg-black text-white text-center bg-black p-4">
-        &copy; 2022 Kelompok 02. All Rights Reserved
-    </footer>
+     <footer class="bg-black text-white text-center p-4">&copy; 2022 Kelompok 02. All Rights Reserved</footer>
 
-    <!-- Javascript -->
-    <script src="https://kit.fontawesome.com/702dc10f84.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
-</body>
-
-</html>
+     <!-- Javascript -->
+     <script src="https://kit.fontawesome.com/702dc10f84.js" crossorigin="anonymous"></script>
+     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script src="script.js"></script>
+   </body>
+ </html>
+ 
