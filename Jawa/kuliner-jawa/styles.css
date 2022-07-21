@@ -71,9 +71,12 @@ nav {
 
 body {
   overflow-x: hidden;
-  background-color: var(--background);
   color: var(--foreground);
   transition: 0.5s;
+}
+
+section {
+  background-color: var(--background);
 }
 
 footer {
