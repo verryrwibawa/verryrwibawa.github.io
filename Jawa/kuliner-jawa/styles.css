@@ -303,6 +303,7 @@ ion-icon {
 
 #hero {
   padding: 8rem 0;
+  overflow: hidden;
 }
 
 #hero h1 {
