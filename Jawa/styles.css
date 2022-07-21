@@ -1,9 +1,33 @@
 /* global styling */
 
+:root {
+  --clr-light: #fff;
+  --clr-secondary: #f8f9fa;
+  --clr-dark: #212529;
+  --clr-gray: #ccc;
+  --clr-accent: #37b00c;
+  --clr-op: #fff;
+
+  --foreground: var(--clr-dark);
+  --background: var(--clr-light);
+}
+
+.dark-mode {
+  --clr-light: rgba(255, 255, 255, 0.8);
+  --clr-secondary: #212529;
+  --clr-dark: #121212;
+  --clr-gray: #333;
+  --clr-accent: #37b00c;
+  --clr-op: rgba(0, 0, 0, 0.8);
+
+  --foreground: var(--clr-light);
+  --background: var(--clr-dark);
+}
+
 * {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -29,123 +53,263 @@ p {
   margin-bottom: 2rem;
 }
 
+section,
+footer,
+body {
+  transition: 0.5s;
+  overflow-x: hidden;
+}
+
+#preloader {
+  height: 100vh;
+  z-index: 42;
+  background: #1f1f1f url(/img/Loader.gif) no-repeat center center;
+  background-size: 30%;
+  display: block;
+}
+
 /* navbar */
-
 nav {
-  font-size: 1.75rem;
-  padding: 2rem 0 !important;
-  transition: .2s;
-}
-
-nav.scrolled {
-  background-color: #000;
-}
-
-nav .btn-hamburger {
-  background-color: transparent;
-  border: none;
+  transition: all 0.5s;
+  z-index: 2;
   color: white;
+  height: 80px;
+}
+
+.fa-bars {
+  color: white;
+}
+
+.navbar-brand {
   font-size: 1.5rem;
-}
-
-nav .navbar-brand {
-  margin-left: 5rem;
-  font-size: 1.75rem;
   font-weight: bold;
-}
-
-nav span {
-  font-size: 1.75rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .text-green {
-  color: #37b00c;
+  color: var(--clr-accent);
+}
+
+.nav-link-wrapper {
+  margin-left: 3rem;
+  height: 100%;
+  gap: 2rem;
+}
+
+.nav-link-wrapper .nav-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.nav-item:before {
+  content: "";
+  height: 5px;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: -15%;
+  background-color: var(--clr-accent);
+  transition: 0.2s;
+}
+
+.nav-item:hover:before,
+.nav-item.active:before {
+  height: 5px;
+  width: 120%;
+}
+
+.nav-link-wrapper li a {
+  font-weight: 300;
+  transition: 0s;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* dropdown menu */
+
+.nav-link-wrapper > li > ul.dropdown-menu {
+  transform: translate3d(0, 0, 0) !important;
+  position: absolute;
+  top: 120% !important;
+  border: none;
+  padding: 15px;
+  background-color: var(--background);
+  border-radius: 10px;
+}
+
+.dropdown-item {
+  padding: 1.25rem !important;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.dropdown-item h5,
+.dropdown-item p {
+  color: var(--foreground);
+}
+
+.dropdown-item .img-dropdown {
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+body.dark-mode .dropdown-item:hover {
+  background-color: var(--clr-secondary);
+}
+
+body.dark-mode .dropdown-item:hover p {
+  color: white;
+}
+
+.dropdown-item:hover h5 {
+  color: var(--clr-accent);
+}
+
+.dropdown-item:hover p {
+  color: black;
 }
 
 /* offcanvas */
+.offcanvas {
+  background-color: var(--clr-secondary);
+}
 
-nav .offcanvas ul li a {
-  font-size: 1rem;
-  font-weight: 600;
+.offcanvas-header {
+  background-color: var(--clr-dark);
+  padding: 2rem 1rem;
+}
+
+.offcanvas ul li a {
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
   display: block;
-  padding: 1rem 5rem;
+  padding: 1.5rem 5rem;
   width: 100%;
+  color: var(--foreground);
+  border-bottom: 1px solid var(--clr-gray);
 }
 
-nav .offcanvas ul li a:hover {
-  background-color: rgba(0, 0, 0, .1);
+.offcanvas ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-nav .offcanvas ul li a.active {
-  background-color: rgba(0, 0, 0, .1);
+.offcanvas ul li a.active {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Section Hero */
+.offcanvas .btn-close {
+  color: white !important;
+}
 
-#hero {
-  background-image: linear-gradient(135deg, rgba(0, 0, 0, .64), rgba(0, 0, 0, .64)), url("/img/jawa.jpg");
+.offcanvas .nav-item {
+  position: relative;
+}
+
+.offcanvas .nav-item::before {
+  content: "";
+  height: 0;
+  width: 5px;
+  position: absolute;
+  left: 0;
+  background-color: var(--clr-accent);
+  transition: 0.2s;
+}
+
+.offcanvas .nav-item:hover {
+  color: var(--clr-accent);
+}
+
+.offcanvas .nav-item:hover:before,
+.offcanvas .nav-item.active:before {
+  height: 100%;
+}
+
+/* Button dark mode */
+
+.dark-mode-container {
+  width: 38px;
+  height: 24px;
+  border-radius: 2.5rem;
+  padding: 0 4px;
+  box-shadow: inset 0 2px 12px rgba(0, 0, 0, 0.3);
+  background-color: #ffcf0d;
+  transition: 0.5s;
+}
+
+.dark-mode .dark-mode-container {
+  background-color: #444;
+}
+
+.checkbox {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+ion-icon {
+  font-size: 12px;
+}
+
+.ball {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  left: 3.5px;
+  border-radius: 100%;
+  transition: all 0.3s ease-out;
+  background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+}
+
+.checkbox:checked ~ .ball {
+  left: calc(100% - (16px + 3.5px));
+}
+
+/* on scroll */
+
+.scrolled nav {
+  top: -7rem;
+}
+
+.scrolled-100 nav {
+  background-color: var(--clr-op);
+  color: var(--foreground);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.scrolled-100 .fa-bars,
+.scrolled-100 .navbar-brand {
+  color: var(--foreground) !important;
+}
+
+.scrolled-100 .nav-link-wrapper li a {
+  color: var(--foreground);
+}
+
+/* Section showcase */
+
+#showcase {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url("/img/jawa.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
-  padding: 15rem 0 22rem 0;
-}
-
-#hero .text-box {
-  width: 50%;
-  margin: 0 auto;
-}
-
-#hero .text-box h1 {
-  font-size: 5rem;
-  font-weight: bold;
-}
-
-#hero .text-box h1::after {
-  content: '';
-  display: block;
-  width: 30%;
-  height: 0.6rem;
-  background-color: #37b00c;
-  border-radius: 2rem;
-  margin: 2rem auto 4rem;
-}
-
-#hero .text-box h3 {
-  font-size: 2rem;
-  margin-top: 2rem;
-  line-height: 1.5;
-  font-weight: 300;
-}
-
-#hero .backToTop {
-  height: 4rem;
-  width: 4rem;
-  position: fixed;
-  bottom: -6rem;
-  right: 2rem;
-  display: flex;
-  justify-content: center;
-  padding-top: 2rem;
-  border-radius: 20%;
-  box-shadow: 0px 0px 35px rgba(0, 0, 0, .8);
-  transition: .3s ease;
-  opacity: 0;
-}
-
-#hero .backToTop:hover {
-  cursor: pointer;
-  padding-top: 1.5rem;
-}
-
-#hero .backToTop.show {
-  bottom: 2rem;
-  opacity: 1;
+  background-position: center 0;
+  height: 100vh;
+  transition: initial;
 }
 
 /* Section Kuliner */
 
 #kuliner div.kuliner-box {
   padding: 7rem 0;
+  transition: 0.5s;
+  overflow: hidden;
 }
 
 #kuliner div.kuliner-box h1.kuliner-title {
@@ -154,31 +318,50 @@ nav .offcanvas ul li a.active {
   font-family: "Montserrat", sans-serif;
 }
 
-#kuliner div.kuliner-box div.kuliner-desc {
+#kuliner div.kuliner-desc {
   margin-left: 2rem;
 }
 
 #kuliner div.kuliner-desc p {
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 2;
 }
 
-#kuliner div.kuliner-desc a.btn-selengkapnya {
+#kuliner .btn-selengkapnya {
   padding: 1rem 3rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
   margin-top: 1rem;
-  border: 2px solid #000;
+  color: var(--foreground);
+  border: 2px solid var(--foreground);
+  border-radius: 50px;
+  transition: 0.3s;
+  overflow: hidden;
+  position: relative;
 }
 
-#kuliner div.kuliner-box img.img-kuliner {
+#kuliner .btn-selengkapnya:hover {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+#kuliner img.img-kuliner {
   object-fit: cover;
+  max-height: 350px;
   width: 80%;
   border-radius: 4px;
 }
 
+#kuliner > div.kuliner-box {
+  color: var(--foreground);
+}
+
+#kuliner .kuliner-box-light {
+  background-color: var(--background);
+}
+
 #kuliner .kuliner-box-dark {
-  background-color: #ededed;
+  background-color: var(--clr-secondary);
 }
 
 /* Footer */
@@ -187,30 +370,21 @@ nav .offcanvas ul li a.active {
   font-size: 1.25rem;
 }
 
-
 @media (max-width: 1200px) {
-  * {
+  :root {
     font-size: 12px;
   }
 
-  nav .container {
-    width: 90% !important;
+  .container {
+    width: 90%;
   }
 
-  #hero .text-box {
-    width: 70%;
+  #showcase .text-box {
+    width: 90%;
   }
 
   #kuliner .kuliner-box {
     padding: 40px 0px 100px;
-  }
-
-  #hero .text-box {
-    width: 90%;
-  }
-
-  #kuliner {
-    text-align: center;
   }
 
   #kuliner div.kuliner-box {
@@ -231,7 +405,7 @@ nav .offcanvas ul li a.active {
 
   #kuliner .img-kuliner {
     width: 100% !important;
-    margin: 2rem 0 4rem;
+    margin: 2rem 0 2rem;
   }
 }
 
@@ -241,6 +415,6 @@ nav .offcanvas ul li a.active {
   }
 
   #kuliner .kuliner-desc .btn-selengkapnya {
-    font-size: .8rem !important;
+    font-size: 0.8rem !important;
   }
 }
