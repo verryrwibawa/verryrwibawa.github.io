@@ -488,6 +488,10 @@ ion-icon {
 }
 
 @media (max-width: 992px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+
   #content {
     padding: 5rem;
   }

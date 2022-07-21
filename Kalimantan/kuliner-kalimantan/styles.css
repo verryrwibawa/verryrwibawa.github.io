@@ -71,9 +71,12 @@ nav {
 
 body {
   overflow-x: hidden;
-  background-color: var(--background);
   color: var(--foreground);
   transition: 0.5s;
+}
+
+section {
+  background-color: var(--background);
 }
 
 footer {
@@ -300,6 +303,7 @@ ion-icon {
 
 #hero {
   padding: 8rem 0;
+  overflow: hidden;
 }
 
 #hero h1 {
@@ -334,7 +338,7 @@ ion-icon {
 
 #content .daftar-isi a,
 .info-lainnya .col {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 #content .daftar-isi h5 {
@@ -357,8 +361,45 @@ ion-icon {
 
 #content .daftar-isi-link {
   text-decoration: none;
-  color: #4664b1;
+  color: #5081fd;
   font-weight: 500;
+  transition: 0.5s;
+  position: relative;
+  transition: 0.3s;
+}
+
+.daftar-isi-link:hover,
+.daftar-isi-link.active {
+  color: #121212 !important;
+}
+
+.dark-mode .daftar-isi-link:hover,
+.dark-mode .daftar-isi-link.active {
+  color: #fff !important;
+}
+
+.daftar-isi-link::after {
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: #121212;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: 0.5s;
+}
+
+.dark-mode .daftar-isi-link::after {
+  background-color: #fff;
+}
+
+.daftar-isi-link:hover::after,
+.daftar-isi-link.active::after {
+  width: 100%;
+}
+
+.dark-mode .daftar-isi-link.active {
+  color: white !important;
 }
 
 #content h1 {
@@ -447,6 +488,10 @@ ion-icon {
 }
 
 @media (max-width: 992px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+
   #content {
     padding: 5rem;
   }

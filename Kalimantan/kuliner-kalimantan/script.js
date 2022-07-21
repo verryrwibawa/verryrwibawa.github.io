@@ -68,4 +68,39 @@ window.addEventListener("load", function () {
 
     parallax.css("background-position", "center " + scrollPosition * 0.5 + "px");
   });
+
+  // daftar isi active on scroll
+  const divs = $(".main-content > div");
+  const links = $(".daftar-isi-link");
+
+  $(window).scroll(function () {
+    let scrollPosition = window.scrollY;
+    let current = "";
+    $.each(divs, function (i) {
+      //get Offset
+      const getOffsetTop = (element) => {
+        let offsetTop = 0;
+        while (element) {
+          offsetTop += element.offsetTop;
+          element = element.offsetParent;
+        }
+        return offsetTop;
+      };
+
+      // calling
+      const divTop = getOffsetTop(divs[i]);
+      const divHeight = divs[i].clientHeight;
+      if (scrollPosition > divTop - 350) {
+        current = divs[i].getAttribute("id");
+      }
+    });
+
+    // add active class
+    $.each(links, function (i) {
+      $(links[i]).removeClass("active");
+      if (links[i].getAttribute("href") === "#" + current) {
+        $(links[i]).addClass("active");
+      }
+    });
+  });
 });
